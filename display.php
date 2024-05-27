@@ -24,7 +24,7 @@ include 'insert.php';
       <th scope="col">Exam_Name</th>
       <th scope="col">Student_ID</th>
       <th scope="col">operation</th>
-
+<!-- up -->
       
     </tr>
   </thead>
