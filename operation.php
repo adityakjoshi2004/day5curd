@@ -8,9 +8,10 @@ if(isset($_POST['submit'])){
     $Email=$_POST['Email_Address'];
     $examname=$_POST['Exam_Name'];
     $studentID=$_POST['student_ID'];
+    $timestamp=$_POST['time'];
    
-    $sql = "INSERT INTO `student_info` (`sno`, `First_name`, `Last_name`, `Email`, `Exam_name`, `student_ID`)
-    VALUES ('$sno', '$firstname', '$lastname', '$Email', '$examname', '$studentID')";
+    $sql = "INSERT INTO `student_info` (`sno`, `First_name`, `Last_name`, `Email`, `Exam_name`, `student_ID`,`time`)
+    VALUES ('$sno', '$firstname', '$lastname', '$Email', '$examname', '$studentID','$timestamp')";
    // print_r($sql);
     //die();
     $result=mysqli_query($con,$sql);
