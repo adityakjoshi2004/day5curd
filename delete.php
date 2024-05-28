@@ -11,8 +11,10 @@ if(isset($_GET['updateid'])){
     $examname = $_POST['examname'];
     $studentID = $_POST['studentID'];
     // Update SQL query
+
     $sql = "UPDATE student_info SET `First_name`='$firstname', `Last_name`='$lastname', `Email`='$email', `Exam_name`='$examname', `student_ID`='$studentID' WHERE `sno`=$sno";
-  
+//   print_r($sql);
+//   die();
     $result = mysqli_query($con, $sql);
     if($result){
         header('location:display.php');

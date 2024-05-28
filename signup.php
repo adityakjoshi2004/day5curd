@@ -17,14 +17,23 @@ include 'insert.php';
         }
         .container {
             margin-top: 100px;
+            padding-left:200px;
+            padding-right:200px;
+            padding:20;
+        }
+        form{
+          display:flex;
+          flex-direction:column;
+          padding:60px;
         }
         .card {
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding:70px;
         }
         .card-header {
-            background-color: #007bff;
-            color: #fff;
+           /* background-color: #007bff;
+            color: #fff;*/
             text-align: center;
             border-bottom: none;
             border-top-left-radius: 15px;
@@ -37,14 +46,20 @@ include 'insert.php';
             border-radius: 15px;
             width: 100%;
             margin-bottom: 30px;
+            margin-bottom: 10px;
         }
         </style>
 </head>
 <body>
+  <div class="container">
 <form method="post" action="operation2.php">
   <div class="container mt-5">
-    <h1>NEW USER</h1>
+  <div class="card">
+  <div class="card-header">
+  <h3>NEW USER</h3>
     <H6>set your username and password</H6>
+      </div>
+      <form method="post" action="operation2.php">
       <div class="mb-3">
         <label for="username" class="form-label">username</label>
         <input type="text" class="form-control" id="user" name="username" required>
@@ -56,6 +71,7 @@ include 'insert.php';
       <input type="submit" class="btn btn-primary" name="submit" value="submit"> 
       
       </form>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgysOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>

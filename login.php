@@ -25,7 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 exit;
             } else {
                 // User is inactive
-                echo "Your account is inactive. Please contact support for assistance.";
+                echo '<div class="alert alert-danger" role="alert">
+                Your account is inactive. Please contact support for assistance.
+              </div>';
             }
         } else {
             // Invalid password
@@ -45,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         /* Custom CSS */
         body {
@@ -53,6 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         .container {
             margin-top: 100px;
+            padding:50px;
         }
         .card {
             border-radius: 15px;
@@ -73,6 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             border-radius: 15px;
             width: 100%;
             margin-bottom: 30px;
+            margin-top: 10px;
         }
         .btn-primary:hover {
             background-color: #0056b3;
@@ -81,6 +85,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             color: red;
             text-align: center;
             margin-top: 15px;
+        }
+        p{
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px; 
         }
     </style>
 </head>
@@ -103,8 +112,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <input type="password" class="form-control" id="password" name="password" required>
                             </div>
                             <button type="submit" class="btn btn-primary">Sign In</button>
-                            
-                            <button class="btn btn-primary "><a href="signup.php" class="text-light"> sign up</a></button>
+                            <div class="text-light"><p>OR New to this website</p></div>
+                            <a href="signup.php" class="text-light btn btn-primary"> sign up</a> 
                         </form>
                         <?php if(isset($error)) { echo "<p class='error-message'>$error</p>"; } ?>
                     </div>
